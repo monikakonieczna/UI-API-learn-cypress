@@ -1,0 +1,10 @@
+{
+  "valid_user": {
+    "username": "kudkipz",
+    "password": "secretPassword$$!"
+  },
+  "invalid_user": {
+    "username": "username",
+    "password": "password"
+  }
+} 

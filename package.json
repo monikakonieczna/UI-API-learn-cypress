@@ -1,0 +1,23 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Example project based on Cypress. The project contains UI tests for website: https://www.demoblaze.com/.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "cy:open": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monikakonieczna/demoblaze-learn-cypress.git"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "Monika Konieczna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monikakonieczna/demoblaze-learn-cypress/issues"
+  },
+  "homepage": "https://github.com/monikakonieczna/demoblaze-learn-cypress#readme"
+}
