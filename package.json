@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/monikakonieczna/demoblaze-learn-cypress/issues"
   },
-  "homepage": "https://github.com/monikakonieczna/demoblaze-learn-cypress#readme"
+  "homepage": "https://github.com/monikakonieczna/demoblaze-learn-cypress#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
+  }
 }
