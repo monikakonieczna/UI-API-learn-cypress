@@ -4,8 +4,11 @@
   "description": "Example project based on Cypress. The project contains UI tests for website: https://www.demoblaze.com/.",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run",
-    "cy:open": "npx cypress open"
+    "cy:run": "npx cypress run",
+    "cy:run ui": "npx cypress run --spec cypress/e2e/demoblaze/**/*-spec.cy.js",
+    "cy:run api": "npx cypress run --spec cypress/integration/api/**/*-spec.cy.js",
+    "cy:open": "npx cypress open",
+    "cy:record": "npx cypress run --record --key cf37417d-760c-4355-9e54-9bd0775ff554 --spec cypress/e2e/demoblaze/**/*-spec.cy.js"
   },
   "repository": {
     "type": "git",

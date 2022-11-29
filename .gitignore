@@ -1,2 +1,4 @@
 node_modules/
 Jenkinsfile
+cypress/screenshots/
+cypress/videos/
