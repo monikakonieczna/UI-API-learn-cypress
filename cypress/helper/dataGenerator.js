@@ -1,14 +1,17 @@
 import { faker } from '@faker-js/faker';
 
 export const getBookingData = () => {
+    const start_date = faker.date.soon();
+    const end_date = faker.date.soon(5, start_date);
     return {
+        
         firstname: faker.name.firstName(),
         lastname: faker.name.lastName(),
         totalprice: faker.finance.amount(),
         depositpaid: faker.datatype.boolean(),
         bookingdates: {
-            checkin: '2022-12-01',
-            checkout: '2022-12-10'
+            checkin: start_date,
+            checkout: end_date,
         },
         additionalneeds: faker.commerce.productName()
     }

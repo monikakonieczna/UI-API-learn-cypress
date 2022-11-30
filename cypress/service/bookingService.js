@@ -16,6 +16,12 @@ export const updateBooking = (body, ID, autoControl = true) => {
         method: 'PUT',
         url: `${API_URL}/booking/${ID}`,
         body: body,
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            //'Cookie': 'token=abc123'
+            'authorization': 'Basic YWRtaW46cGFzc3dvcmQxMjM='
+        },
         failOnStatusCode: autoControl,
     })
 }
@@ -46,11 +52,14 @@ export const getBookingIds = (body, autoControl = true) => {
     })
 }
 
-export const deleteBooking = (body, ID, autoControl = true) => {
+export const deleteBooking = (ID, autoControl = true) => {
     return cy.request({
         method: 'DELETE',
         url: `${API_URL}/booking/${ID}`,
-        body: body,
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': 'Basic YWRtaW46cGFzc3dvcmQxMjM='
+        },
         failOnStatusCode: autoControl,
     })
 }
