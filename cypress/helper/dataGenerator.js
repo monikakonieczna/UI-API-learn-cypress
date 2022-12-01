@@ -16,3 +16,18 @@ export const getBookingData = () => {
         additionalneeds: faker.commerce.productName()
     }
 }
+
+export const getNullData = () => {
+    return {
+        
+        firstname: null,
+        lastname: null,
+        totalprice: null,
+        depositpaid: null,
+        bookingdates: {
+            checkin: null,
+            checkout: null,
+        },
+        additionalneeds: null
+    }
+}

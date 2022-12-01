@@ -20,4 +20,18 @@ describe('Tests for GET Booking by ID endpoints', () => {
             })
         })
     })
+    it('Negative: Get booking which does not exist', () => {
+        let bookingDataId = "1123";
+        getBookingById(bookingDataId, false).then(response => {
+            expect(response.status).to.eq(404);
+            expect(response.body.message).to.eq('Not Found');
+        })
+    })
+    it('Negative: Get booking with id as a string', () => {
+        let bookingDataId = "fakeString";
+        getBookingById(bookingDataId, false).then(response => {
+            expect(response.status).to.eq(405);
+            expect(response.body.message).to.eq('Method Not Allowed');
+        })
+    })
 })

@@ -8,7 +8,8 @@
     "cy:run ui": "npx cypress run --spec cypress/e2e/demoblaze/**/*-spec.cy.js",
     "cy:run api": "npx cypress run --spec cypress/integration/api/**/*-spec.cy.js",
     "cy:open": "npx cypress open",
-    "cy:record": "npx cypress run --record --key cf37417d-760c-4355-9e54-9bd0775ff554 --spec cypress/e2e/demoblaze/**/*-spec.cy.js"
+    "cy:record": "npx cypress run --record --key cf37417d-760c-4355-9e54-9bd0775ff554 --spec cypress/e2e/demoblaze/**/*-spec.cy.js",
+    "cy:smoke": "npx cypress run --env grepTags=smoke"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/monikakonieczna/demoblaze-learn-cypress#readme",
   "devDependencies": {
+    "@cypress/grep": "^3.1.0",
     "@faker-js/faker": "^7.6.0"
   }
 }

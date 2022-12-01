@@ -2,8 +2,6 @@ import {createBooking, getBookingById, deleteBooking} from "../../service/bookin
 import {getBookingData} from "../../helper/dataGenerator"
 import { faker } from '@faker-js/faker';
 
-
-
 describe('Tests for DELETE Booking endpoint', () => {
     let bookingData = getBookingData();
 
