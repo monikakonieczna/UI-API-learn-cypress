@@ -9,7 +9,7 @@
     "test:booker": "npx cypress run --spec cypress/e2e/booker/**",
     "cy:open": "npx cypress open",
     "cy:record": "npx cypress run --record --key 0739ba64-ca45-4afc-90e2-f7b2fe7cfc4c",
-    "test:smoke": "npx cypress run --env grepTags=smoke",
+    "test:smoke": "npx cypress run --env grepTags=smoke --record --key 0739ba64-ca45-4afc-90e2-f7b2fe7cfc4c",
     "test:regression": "npx cypress run --env grepTags=regression"
   },
   "repository": {
