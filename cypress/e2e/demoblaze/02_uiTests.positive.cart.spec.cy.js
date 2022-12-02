@@ -21,7 +21,7 @@ describe('Tests for CART feature. Adding, deleting products and cart overview.',
         cy.log('WHEN User adds product to the cart')
         ProductPage.addToCart();
         cy.log('THEN alert about succesful operation pops-up')
-        cy.on ('window:alert', (text)=>{
+        cy.on ('window:alert', (text) => {
             expect(text).to.contains('Product added');
         })
         cy.log('WHEN user moves to the cart')

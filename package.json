@@ -10,7 +10,7 @@
     "cy:open": "npx cypress open",
     "cy:record": "npx cypress run --record --key cf37417d-760c-4355-9e54-9bd0775ff554 --spec cypress/e2e/demoblaze/**/*-spec.cy.js",
     "test:smoke": "npx cypress run --env grepTags=smoke",
-    "test:regression": "npx cypress run --env grepTags=regression",
+    "test:regression": "npx cypress run --env grepTags=regression"
   },
   "repository": {
     "type": "git",

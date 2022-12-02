@@ -11,7 +11,7 @@ describe('Tests for LOG IN feature.', () => {
     })
 
     it('Positive: User can log in with correct credentials.', () => {
-        cy.get('@user').then((user)=>{
+        cy.get('@user').then((user) => {
             cy.log('WHEN User clicks Login from menu')
             MainPage.moveToLoginPage();
             cy.log('Then User can see login form window')

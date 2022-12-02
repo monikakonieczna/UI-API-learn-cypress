@@ -12,7 +12,7 @@ describe('Tests for LOG IN feature.', () => {
     })
 
     it('Negative: User can not log in with incorrect credentials.', () => {
-        cy.get('@user').then((user)=>{
+        cy.get('@user').then((user) => {
             cy.log('WHEN User clicks Login from menu')
             MainPage.moveToLoginPage();
             cy.log('Then User can see login form window')
@@ -20,7 +20,7 @@ describe('Tests for LOG IN feature.', () => {
             .injectCredentials(user.invalid_user.username, user.invalid_user.password);
             LoginPage.submitCredentials();
 
-            cy.on ('window:alert', (text)=>{
+            cy.on ('window:alert', (text) => {
                 expect(text).to.contains('Wrong password.');
             })
         })

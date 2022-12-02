@@ -10,12 +10,12 @@ describe('Tests for CONTACT feature.', () => {
         MainPage.open()
     })
     it('Positive: User can send contact message', () => {
-        cy.get('@ms').then((ms)=>{
+        cy.get('@ms').then((ms) => {
             MainPage.moveToContactPage();
             ContactPage.fillTheForm(ms.email, ms.name, ms.message);
             ContactPage.sendMessage();
 
-            cy.on ('window:alert', (text)=>{
+            cy.on ('window:alert', (text) => {
               expect(text).to.contains('Thanks for the message!!');
             })
         })
