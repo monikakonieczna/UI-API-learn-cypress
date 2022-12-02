@@ -1,5 +1,4 @@
 import MainPage from "../../page-objects/MainPage"
-import ProductPage from "../../page-objects/ProductPage"
 
 describe('Tests for product categories change.', () => {
     beforeEach(() => {
