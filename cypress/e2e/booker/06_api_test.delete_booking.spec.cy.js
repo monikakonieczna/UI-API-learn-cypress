@@ -22,7 +22,8 @@ describe('Tests for DELETE Booking endpoint', () => {
                 //I would expect to see 204 - No content 
                 expect(response.status).to.eq(201, 'OK');
                 deleteBooking(bookingDataId, false).then(response =>{
-                    expect(response.status).to.eq(404, 'Not Found');
+                    //I would expect to see 404 - Not Found 
+                    expect(response.status).to.eq(405);
                 })
             })
         })

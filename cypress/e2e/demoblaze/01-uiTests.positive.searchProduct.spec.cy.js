@@ -9,7 +9,7 @@ describe('Tests for product categories change.', () => {
         cy.log('WHEN User clicks Phones category')
         MainPage.performPhonesSearch();
         cy.log('THEN phones are presented on main page')
-        ProductPage.getProductsList()
+        MainPage.getProductsList()
         .then( item  => {
             expect(item[0]).to.contain.text('Samsung')
             expect(item[1]).to.contain.text('Nokia')
@@ -25,7 +25,7 @@ describe('Tests for product categories change.', () => {
         cy.log('WHEN User clicks Laptopes category')
         MainPage.performLaptopesSearch();
         cy.log('THEN laptopes are presented on main page')
-        ProductPage.getProductsList()
+        MainPage.getProductsList()
         .then( item  => {
             expect(item[0]).to.contain.text('Sony')
             expect(item[1]).to.contain.text('Sony')
@@ -40,7 +40,7 @@ describe('Tests for product categories change.', () => {
         cy.log('WHEN User clicks Monitors category')
         MainPage.performMonitorsSearch();
         cy.log('THEN monitors are presented on main page')
-        ProductPage.getProductsList()
+        MainPage.getProductsList()
         .then( item  => {
             expect(item[0]).to.contain.text('Apple monitor')
             expect(item[1]).to.contain.text('ASUS')

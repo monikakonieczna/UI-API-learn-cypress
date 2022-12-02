@@ -6,9 +6,9 @@
   "scripts": {
     "cy:run": "npx cypress run",
     "test:demoblaze": "npx cypress run --spec cypress/e2e/demoblaze/**",
-    "test:booker": "npx cypress run --spec cypress/e2e/booker/* --record --key cf37417d-760c-4355-9e54-9bd0775ff554",
+    "test:booker": "npx cypress run --spec cypress/e2e/booker/**",
     "cy:open": "npx cypress open",
-    "cy:record": "npx cypress run --record --key cf37417d-760c-4355-9e54-9bd0775ff554",
+    "cy:record": "npx cypress run --record --key 0739ba64-ca45-4afc-90e2-f7b2fe7cfc4c",
     "test:smoke": "npx cypress run --env grepTags=smoke",
     "test:regression": "npx cypress run --env grepTags=regression"
   },
