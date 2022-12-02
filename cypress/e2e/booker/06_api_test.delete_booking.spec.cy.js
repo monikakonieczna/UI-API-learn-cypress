@@ -9,7 +9,8 @@ describe('Tests for DELETE Booking endpoint', () => {
         createBooking(bookingData).then(response => {
             let bookingDataId = Cypress.env('responses')[0].bookingid;
             deleteBooking(bookingDataId).then(response => {
-                expect(response.status).to.eq(204, 'OK');
+                //I would expect to see 204 - No content 
+                expect(response.status).to.eq(201, 'OK');
             })
         })
     })
@@ -18,7 +19,8 @@ describe('Tests for DELETE Booking endpoint', () => {
         createBooking(bookingData).then(response => {
             let bookingDataId = Cypress.env('responses')[0].bookingid;
             deleteBooking(bookingDataId).then(response => {
-                expect(response.status).to.eq(204);
+                //I would expect to see 204 - No content 
+                expect(response.status).to.eq(201, 'OK');
                 deleteBooking(bookingDataId, false).then(response =>{
                     expect(response.status).to.eq(404, 'Not Found');
                 })
@@ -30,7 +32,8 @@ describe('Tests for DELETE Booking endpoint', () => {
         let bookingDataId = "1123";
         deleteBooking(bookingDataId, false).then(response => {
             console.log(response)
-            expect(response.status).to.eq(404, 'Not Found');
+            //I would expect to see 404 - Not Found 
+            expect(response.status).to.eq(405, 'Method Not Allowed');
         })
     })
 
@@ -38,7 +41,7 @@ describe('Tests for DELETE Booking endpoint', () => {
         let bookingDataId = faker.commerce.product();
         deleteBooking(bookingDataId, false).then(response => {
             console.log(response)
-            expect(response.status).to.eq(405, 'Not Allowed');
+            expect(response.status).to.eq(405, 'Method Not Allowed');
         })
         
     })

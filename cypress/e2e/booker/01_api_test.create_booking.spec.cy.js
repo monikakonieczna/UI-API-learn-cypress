@@ -5,6 +5,7 @@ describe('Create new booking', () => {
     it('Positive: Create booking with all required fields', () => {
         let bookingData = getBookingData();
         createBooking(bookingData).then(response => {
+            let price = bookingData.totalprice;
             expect(response.status).to.eq(200);
             expect(response.body.booking).to.have.property('firstname', bookingData.firstname);
             expect(response.body.booking).to.have.property('lastname', bookingData.lastname);
@@ -12,7 +13,7 @@ describe('Create new booking', () => {
             expect(response.body.booking).to.have.property('additionalneeds', bookingData.additionalneeds);
             expect(response.body.booking.bookingdates).to.have.property('checkin', bookingData.bookingdates.checkin.toLocaleDateString('fr-CA'));
             expect(response.body.booking.bookingdates).to.have.property('checkout', bookingData.bookingdates.checkout.toLocaleDateString('fr-CA'));
-            expect(response.body.booking).to.have.property('totalprice', bookingData.totalprice);
+            expect(response.body.booking).to.have.property('totalprice', price);
         })
     })
     it('Negative: Create booking with empty body', () => {

@@ -7,7 +7,7 @@ export const getBookingData = () => {
         
         firstname: faker.name.firstName(),
         lastname: faker.name.lastName(),
-        totalprice: faker.finance.amount(),
+        totalprice: faker.datatype.number(),
         depositpaid: faker.datatype.boolean(),
         bookingdates: {
             checkin: start_date,
